@@ -1,0 +1,45 @@
+* {
+    font-family: 'poppins';
+}
+
+.form-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .form-box {
+        top: 60%;
+    }
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.background-div {
+    width: 1/3;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundChange 20s linear infinite;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-image: url('../assets/bgContainer/4.jpg');
+    }
+    30% {
+        background-image: url('../assets/bgContainer/2.jpg');
+    }
+    60% {
+        background-image: url('../assets/bgContainer/3.jpg');
+    }
+    100% {
+        background-image: url('../assets/bgContainer/4.jpg');
+    }
+}
