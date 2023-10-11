@@ -8,19 +8,28 @@ import logo from '../assets/LogoPng.png'
 
 
 function SignUp() {
+  //used to navigate multipages using react dom
   const navigate = useNavigate();
 
+  //useState use to get data from iput fields and use that data for validations
   const [userName,setUserName]=useState('');
   const [userEmail,setUserEmail]=useState('');
   const [pWord,setPWord]=useState('');
   const [rePWord,setRePWord]=useState('');
 
+  //this function tigger when signup button clicked
     const signupHandler=()=>{
+      //if any datafield was empty..this alert messege display on screen
         if(userName==''|| userEmail=='' || pWord=='' || rePWord==""){
           alert("Your Input Fields are Emplty")
         }
+        //if password and re entered password are not matched, this error messege tiggered
         else if(pWord!=rePWord){
           alert("Both Passwords are mush be same!")
+        }else{
+          //if all done successfully navigate to login button
+          //reason of this is when user add data to database as a new user, this process go as him as a exising user
+          navigate('/')
         }
     }
 

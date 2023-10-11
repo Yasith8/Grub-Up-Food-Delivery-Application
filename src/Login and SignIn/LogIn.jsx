@@ -5,20 +5,34 @@ import logo from '../assets/LogoPng.png'
 
 import { useNavigate } from 'react-router-dom';
 
+
 function LogIn() {
+
+  //sample for backend
+  const userName='admin';
+  const email='admin@gmail.com';
+  const password='1234';
 
   const navigate = useNavigate();
 
   const [inputuserName,setInputuserName]=useState('');
   const [inputPassword,setInputPassword]=useState('');
 
-  const loginHandler=()=>{
-    if(inputuserName==''|| inputPassword==''){
-      alert('Your UserName or Password InputField is empty')
-    }else{
-      navigate('/dashboard')
-    }
-  }
+  const loginHandler = async (e) => {
+    e.preventDefault();
+  
+      if (inputuserName === '' || inputPassword === '') {
+        alert('Your UserName or Password InputField is empty');
+      } else if((userName==inputuserName || email==inputuserName)&&(password==inputPassword)) {
+        navigate('/dashboard');
+      }else{
+        alert('Invalid Creditials')
+      }
+      
+      ;
+    
+  };
+  
 
   const signupHandler =()=>{
     navigate('/signup');
@@ -91,7 +105,7 @@ function LogIn() {
         
       </form>
       {/* this hyperlink connect to sign up page */}
-      <p className='mt-3'>Don't You have Account? <span><a href="" className='text-bold font-medium text-green-400' onClick={signupHandler}>Sign Up</a></span></p>
+      <p className='mt-3'>Don't You have Account? <span><a href="/signup" className='text-bold font-medium text-green-400' onClick={signupHandler}>Sign Up</a></span></p>
       </div>
       </div>
     {/* login form container end */}
