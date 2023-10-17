@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 //import image
 import Logo from '../assets/WebIcon.png'
+import profileImg from '../assets/profile.jpg'
 
 //import icon
 import { BiSolidBowlRice,BiSolidDrink,BiSearchAlt2} from "react-icons/bi";
@@ -17,6 +18,8 @@ import {TbTruckDelivery} from "react-icons/tb";
 import {LiaCertificateSolid} from "react-icons/lia";
 import {IoMdSettings} from "react-icons/io";
 import {FiLogOut} from "react-icons/fi";
+import {MdOutlineNotificationsNone} from "react-icons/md";
+import {BsCart3} from "react-icons/bs";
 
 
 function UserDashBoard() {
@@ -75,12 +78,17 @@ function UserDashBoard() {
       {/* user panal start */}
       <div className="dash-container md:w-5/6 md:h-screen bg-gray-200 flex flex-col">
         {/* search bar start */}
-        <div className="search-bar h-[10%] w-screen bg-white flex items-center">
-        <div class="relative m-[50px]">
+        <div className="search-bar h-[10%] px-7 w-full bg-white box-border flex items-center justify-between">
+        <div class="relative ">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
               < BiSearchAlt2/>
             </div>
           <input type="text" id="email-address-icon" class="bg-white border border-gray-200 text-gray-900 text-sm rounded-sm focus:ring-green-500 focus:border-green-500 block w-[500px] pl-10 p-3  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="search..."/>
+        </div>
+        <div className='flex pr-5'>
+                    <button className='text-[30px] relative top-[7px] px-2'><MdOutlineNotificationsNone/><div className='bg-red-500 w-4 h-4 relative -top-8 left-4 rounded-2xl text-sm'>1</div></button>
+                    <button className='text-[20px] px-6'><BsCart3/></button>
+                    <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button>
         </div>
         </div>
         {/* search bar end */}
