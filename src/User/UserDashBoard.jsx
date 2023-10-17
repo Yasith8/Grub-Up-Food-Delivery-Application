@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from '../assets/WebIcon.png'
 
 //import icon
-import { BiSolidBowlRice,BiSolidDrink } from "react-icons/bi";
+import { BiSolidBowlRice,BiSolidDrink,BiSearchAlt2} from "react-icons/bi";
 import {GiTacos,GiCroissant,GiSushis} from "react-icons/gi";
 import {FaPizzaSlice,FaHandHolding} from "react-icons/fa";
 import {PiBeerBottleFill,PiHamburgerFill} from "react-icons/pi";
@@ -72,12 +72,23 @@ function UserDashBoard() {
         </button>
       </div>
       {/* dashbord panal end */}
+      {/* user panal start */}
       <div className="dash-container md:w-5/6 md:h-screen bg-gray-200 flex flex-col">
-        <div className="search-bar h-[10%] w-screen bg-white sticky">ddd</div>
+        {/* search bar start */}
+        <div className="search-bar h-[10%] w-screen bg-white flex items-center">
+        <div class="relative m-[50px]">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+              < BiSearchAlt2/>
+            </div>
+          <input type="text" id="email-address-icon" class="bg-white border border-gray-200 text-gray-900 text-sm rounded-sm focus:ring-green-500 focus:border-green-500 block w-[500px] pl-10 p-3  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="search..."/>
+        </div>
+        </div>
+        {/* search bar end */}
         <div className="content-bar h-[90%] w-screen relative">
            
            </div>
         </div>
+        {/* user panal end */}
     </div>
   )
 }
