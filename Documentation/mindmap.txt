@@ -1,0 +1,11 @@
+**in user dashboard
+ 
+ 1.user can order the food/add any number of same product on to the card.but when he click add button incard it show tick mark..when he hover it, it tooltip 
+   about add any number of qty whrn you go to check cart.
+ 
+
+**In Seller dashboard
+1.need to show reports
+2.can change product's price without using code(non it user friendly)
+3.order tracking
+4.history data keeping 
