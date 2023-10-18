@@ -91,38 +91,31 @@ function UserDashBoard() {
                     {/* <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button> */}
 
                     {/* test start */}
-                    <div class="bg-white py-1 flex flex-col justify-center">
-                         <div class="flex items-center justify-center p-1">
-                              <div class=" relative inline-block text-left dropdown">
-                                   <span class="rounded-md">
-                                        <button className="inline-flex justify-center w-full px-1 py-1 rounded-lg text-sm font-medium 
-                                                       leading-5 text-gray-200 transition duration-150 ease-in-out bg-white border
-                                                        border-white hover:text-gray-500 focus:outline-none focus:border-green-300 
-                                                        focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800" 
-                                                type="button" 
-                                                aria-haspopup="true" 
-                                                aria-expanded="true" 
-                                                aria-controls="headlessui-menu-items-117">
-                                                        <img src={profileImg} className='w-9 h-9 rounded-full' />
-                                        </button>
-                                   </span>
-    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-          <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
-                <div class="px-4 py-3">         
-                       <p class="text-sm leading-5">Signed in as</p>
-                       <p class="text-sm font-medium leading-5 text-gray-900 truncate">tom@example.com</p>
-                </div>
-          <div class="py-1">
-                     <button className="text-gray-700 hover:bg-green-700 flex justify-between w-full px-4 py-2 text-sm leading-5   text-left"  role="menuitem" >Account settings</button>
-                     <button className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5  hover:text-green-500 text-left"  role="menuitem" >Support</button>
-                                <span role="menuitem" class="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50" aria-disabled="true">Track Your Helth(soon)</span>
-                     <button className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 hover:text-green-500  text-left"  role="menuitem" >License</button></div>
-            <div className="py-1" onClick={logoutHandler}>
-                     <button className="text-gray-700 hover:bg-green-500 flex justify-between w-full px-4 py-2 text-sm leading-5  text-left"  role="menuitem" onClick={logoutHandler} >Sign out</button></div>
-            </div>
-          </div>
+                    <div class="relative inline-block text-left">
+  <div>
+    <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+    <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button>  
+    </button>
+  </div>
+
+ 
+  <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+    <div class="py-1" role="none">
+      <a href="#" class="text-gray-700 hover:bg-green-200 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Edit</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Duplicate</a>
     </div>
-</div>              
+    <div class="py-1" role="none">
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Archive</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Move</a>
+    </div>
+    <div class="py-1" role="none">
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Share</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Add to favorites</a>
+    </div>
+    <div class="py-1" role="none">
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-6">Delete</a>
+    </div>
+  </div>
 </div>
                     {/* test end */}
                    
