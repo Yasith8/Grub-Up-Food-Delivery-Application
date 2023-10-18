@@ -88,7 +88,44 @@ function UserDashBoard() {
         <div className='flex pr-5'>
                     <button className='text-[30px] relative top-[7px] px-2'><MdOutlineNotificationsNone/><div className='bg-red-500 w-4 h-4 relative -top-8 left-4 rounded-2xl text-sm'>1</div></button>
                     <button className='text-[20px] px-6'><BsCart3/></button>
-                    <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button>
+                    {/* <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button> */}
+
+                    {/* test start */}
+                    <div class="bg-white py-1 flex flex-col justify-center">
+                         <div class="flex items-center justify-center p-1">
+                              <div class=" relative inline-block text-left dropdown">
+                                   <span class="rounded-md">
+                                        <button className="inline-flex justify-center w-full px-1 py-1 rounded-lg text-sm font-medium 
+                                                       leading-5 text-gray-200 transition duration-150 ease-in-out bg-white border
+                                                        border-white hover:text-gray-500 focus:outline-none focus:border-green-300 
+                                                        focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800" 
+                                                type="button" 
+                                                aria-haspopup="true" 
+                                                aria-expanded="true" 
+                                                aria-controls="headlessui-menu-items-117">
+                                                        <img src={profileImg} className='w-9 h-9 rounded-full' />
+                                        </button>
+                                   </span>
+    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+          <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                <div class="px-4 py-3">         
+                       <p class="text-sm leading-5">Signed in as</p>
+                       <p class="text-sm font-medium leading-5 text-gray-900 truncate">tom@example.com</p>
+                </div>
+          <div class="py-1">
+                     <button className="text-gray-700 hover:bg-green-700 flex justify-between w-full px-4 py-2 text-sm leading-5   text-left"  role="menuitem" >Account settings</button>
+                     <button className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5  hover:text-green-500 text-left"  role="menuitem" >Support</button>
+                                <span role="menuitem" class="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50" aria-disabled="true">Track Your Helth(soon)</span>
+                     <button className="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 hover:text-green-500  text-left"  role="menuitem" >License</button></div>
+            <div className="py-1" onClick={logoutHandler}>
+                     <button className="text-gray-700 hover:bg-green-500 flex justify-between w-full px-4 py-2 text-sm leading-5  text-left"  role="menuitem" onClick={logoutHandler} >Sign out</button></div>
+            </div>
+          </div>
+    </div>
+</div>              
+</div>
+                    {/* test end */}
+                   
         </div>
         </div>
         {/* search bar end */}
