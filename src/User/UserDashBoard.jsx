@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment, useState } from 'react'
 import Category from './Category';
 import '../User/UserDashboard.css'
 
@@ -20,6 +20,7 @@ import {IoMdSettings} from "react-icons/io";
 import {FiLogOut} from "react-icons/fi";
 import {MdOutlineNotificationsNone} from "react-icons/md";
 import {BsCart3} from "react-icons/bs";
+
 
 
 function UserDashBoard() {
@@ -50,6 +51,8 @@ function UserDashBoard() {
       navigate('/')
     }
   }
+
+  const [logP,setLogP]=useState(false);
 
 
   return (
@@ -85,10 +88,37 @@ function UserDashBoard() {
             </div>
           <input type="text" id="email-address-icon" class="bg-white border border-gray-200 text-gray-900 text-sm rounded-sm focus:ring-green-500 focus:border-green-500 block w-[500px] pl-10 p-3  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="search..."/>
         </div>
-        <div className='flex pr-5'>
+        <div className='flex pr-5 items-center'>
                     <button className='text-[30px] relative top-[7px] px-2'><MdOutlineNotificationsNone/><div className='bg-red-500 w-4 h-4 relative -top-8 left-4 rounded-2xl text-sm'>1</div></button>
                     <button className='text-[20px] px-6'><BsCart3/></button>
-                    <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button>
+                   {/*  <button><img src={profileImg} className='w-9 h-9 rounded-full' /></button> */}
+
+
+                    {/* Profile Navbar Start */}
+
+                    <div class="relative inline-block text-left">
+                          <div>
+                            <button type="button" 
+                            onClick={() => (logP===false)?setLogP(true):setLogP(false)}
+                            class="w-full justify-center rounded-md bg-white  text-sm font-semibold text-gray-900  hover:bg-gray-50">
+                                  <img src={profileImg} className='w-9 h-9 rounded-full' />   
+                            </button>
+                          </div>
+
+
+                         <div class={`${(logP==true)?'':'hidden'} absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                           <div class="py-1" role="none">
+                           
+                             <a href="#" class="text-gray-700 hover:bg-green-300 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                             <a href="#" class="text-gray-700 hover:bg-green-300 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                             <a href="#" class="text-gray-700 hover:bg-green-300 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                            <button type="submit" class="text-gray-700 hover:bg-green-300 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3" onClick={logoutHandler}>Sign out</button>
+                             
+                           </div>
+                         </div>
+                       </div>
+
+                    {/* Profile Navbar end*/}
         </div>
         </div>
         {/* search bar end */}
