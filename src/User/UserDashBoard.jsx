@@ -20,6 +20,7 @@ import {IoMdSettings} from "react-icons/io";
 import {FiLogOut} from "react-icons/fi";
 import {MdOutlineNotificationsNone} from "react-icons/md";
 import {BsCart3} from "react-icons/bs";
+import Slider from './Slider';
 
 
 
@@ -123,7 +124,12 @@ function UserDashBoard() {
         </div>
         {/* search bar end */}
         <div className="content-bar h-[90%] w-screen relative">
-           
+           <div className="category-slider w-screen h-[20%]">
+            {/* slider start */}
+            <Slider choice={category}/>
+            {/* slider end */}
+           </div>
+           <div className="Product-items w-screen h-[80%]"></div>
            </div>
         </div>
         {/* user panal end */}
