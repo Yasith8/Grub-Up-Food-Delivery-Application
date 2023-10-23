@@ -9,42 +9,22 @@ import 'swiper/css/pagination';
 import '../User/Slider.css'
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination ,Navigation} from 'swiper/modules';
 
 
 function Slider(props) {
   return (
-    <div className="m-8">
+    <div className="m-8 box-border">
     <Swiper
-      slidesPerView={1}
-      spaceBetween={10}
-      pagination={{
-        clickable: true,
-      }}
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
-        },
-      }}
-      modules={[Pagination]}
+      slidesPerView={3} // Adjust this value as needed
+      spaceBetween={20} // Adjust the spacing between slides
+      navigation={true} 
+      modules={[Navigation]}
       className="mySwiper"
     >
-
-        {props.choice.map((e)=>(
-            <SwiperSlide>{e.name}</SwiperSlide>
-        ))}
-
- 
-     
+      {props.choice.map((e) => (
+        <SwiperSlide className={`border-s-indigo-800`} key={e.name}>{e.name}</SwiperSlide>
+      ))}
     </Swiper>
   </div>
   )
