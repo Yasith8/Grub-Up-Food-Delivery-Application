@@ -22,19 +22,27 @@ import {MdOutlineNotificationsNone} from "react-icons/md";
 import {BsCart3} from "react-icons/bs";
 import Slider from './Slider';
 
+//import images
+import indian from '../assets/category/indian.jpg'
+import burger from '../assets/category/burger.jpeg'
+import drink from '../assets/category/drink.jpg'
+import chinese from '../assets/category/chinese.jpg'
+import europe from '../assets/category/europe.jpg'
+import mexican from '../assets/category/mexican.jpg'
+import pizza from '../assets/category/pizza.jpg'
+
 
 
 function UserDashBoard() {
 
   const category=[
-    {icon:BiSolidBowlRice, name:"Indian"},
-    {icon:GiTacos,name:"Mexican"},
-    {icon:GiCroissant,name:"Europian"},
-    {icon:GiSushis,name:"Chinese"},
-    {icon:PiHamburgerFill,name:"Burger"},
-    {icon:FaPizzaSlice,name:"Pizza"},
-    {icon:BiSolidDrink,name:"Bevarage"},
-    {icon:PiBeerBottleFill,name:"Alcohol"}
+    {icon:BiSolidBowlRice, name:"Indian",bg:{indian}},
+    {icon:GiTacos,name:"Mexican",bg:{mexican}},
+    {icon:GiCroissant,name:"Europian",bg:{europe}},
+    {icon:GiSushis,name:"Chinese",bg:{chinese}},
+    {icon:PiHamburgerFill,name:"Burger",bg:{burger}},
+    {icon:FaPizzaSlice,name:"Pizza",bg:{pizza}},
+    {icon:BiSolidDrink,name:"Bevarage",bg:{drink}}
   ];
 
   const service=[
