@@ -1,0 +1,13 @@
+#btn:hover {
+    text-shadow: 2px 2px 25px #00FC74;
+}
+
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+}
+
+.min-h-screen {
+    min-height: 0;
+}
