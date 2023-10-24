@@ -36,13 +36,13 @@ import pizza from '../assets/category/pizza.jpg'
 function UserDashBoard() {
 
   const category=[
-    {icon:BiSolidBowlRice, name:"Indian",bg:{indian}},
-    {icon:GiTacos,name:"Mexican",bg:{mexican}},
-    {icon:GiCroissant,name:"Europian",bg:{europe}},
-    {icon:GiSushis,name:"Chinese",bg:{chinese}},
-    {icon:PiHamburgerFill,name:"Burger",bg:{burger}},
-    {icon:FaPizzaSlice,name:"Pizza",bg:{pizza}},
-    {icon:BiSolidDrink,name:"Bevarage",bg:{drink}}
+    {icon:BiSolidBowlRice, name:"Indian",bg:indian},
+    {icon:GiTacos,name:"Mexican",bg:mexican},
+    {icon:GiCroissant,name:"Europian",bg:europe},
+    {icon:GiSushis,name:"Chinese",bg:chinese},
+    {icon:PiHamburgerFill,name:"Burger",bg:burger},
+    {icon:FaPizzaSlice,name:"Pizza",bg:pizza},
+    {icon:BiSolidDrink,name:"Bevarage",bg:drink}
   ];
 
   const service=[
@@ -132,7 +132,7 @@ function UserDashBoard() {
         </div>
         {/* search bar end */}
         <div className="content-bar h-[90%] w-screen relative">
-           <div className="category-slider w-screen h-[20%]">
+           <div className="category-slider h-[20%]">
             {/* slider start */}
             <Slider choice={category}/>
             {/* slider end */}
