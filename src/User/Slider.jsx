@@ -1,31 +1,19 @@
 import React from 'react'
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 import '../User/Slider.css'
-
-// import required modules
-import { Pagination ,Navigation} from 'swiper/modules';
 
 
 function Slider(props) {
   return (
-    <div className="m-8 box-border">
-    <Swiper
-      slidesPerView={3} // Adjust this value as needed
-      spaceBetween={20} // Adjust the spacing between slides
-      navigation={true} 
-      modules={[Navigation]}
-      className="mySwiper"
-    >
+    <div className="m-8 flex items-center justify-between box-border pr-[260px]">
       {props.choice.map((e) => (
-        <SwiperSlide className={`border-s-indigo-800`} key={e.name}>{e.name}</SwiperSlide>
+        <div className={`w-[150px] h-[80px] flex items-center justify-center bg-cover text-white font-bold text-xl shadow-lg rounded-md slide`} 
+        key={e.name}
+        style={{ backgroundImage: `url(${e.bg})`}}
+        >
+          <h1 className='shadow-2xl'>{e.name}</h1></div>
       ))}
-    </Swiper>
   </div>
   )
 }
