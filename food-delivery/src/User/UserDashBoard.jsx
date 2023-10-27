@@ -30,6 +30,7 @@ import chinese from '../assets/category/chinese.jpg'
 import europe from '../assets/category/europe.jpg'
 import mexican from '../assets/category/mexican.jpg'
 import pizza from '../assets/category/pizza.jpg'
+import ProductCard from './ProductCard';
 
 
 
@@ -137,7 +138,9 @@ function UserDashBoard() {
             <Slider choice={category}/>
             {/* slider end */}
            </div>
-           <div className="Product-items w-screen h-[80%]"></div>
+           <div className="Product-items w-screen h-[80%]">
+            <ProductCard/>
+           </div>
            </div>
         </div>
         {/* user panal end */}
